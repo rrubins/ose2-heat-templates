@@ -1,0 +1,59 @@
+parameters:
+  key_name: cloudkey
+  domain: ose.example.com
+  # DNS bind TSIG key
+  bind_keyvalue: <changeme>
+  hosts_domain: example.com
+  broker_server_flavor: m1.small
+  node_server_flavor: m1.medium
+  node_gears_vol_size: 100
+  primary_avail_zone: nova:comp0.example.com
+  secondary_avail_zone: nova:comp1.example.com
+  tertiary_avail_zone: nova:comp2.example.com
+  broker1_hostname: broker1
+  broker2_hostname: broker2
+  broker3_hostname: broker3
+  node1_hostname: node1
+  node2_hostname: node2
+  node3_hostname: node3
+  load_bal_hostname: broker
+  broker_image: RHEL66-OSE22-broker
+  node_image: RHEL66-OSE22-node
+  install_method: rhsm
+  # Replace with valid Red Hat Subscription Management registration username and password
+  rh_reg_user: <changeme>
+  rh_reg_pass: <changeme>
+  # Replace with valid Red Hat Subscription Management pool ID that contains OpenShift 2.x Infrastructure entitlements
+  rh_reg_pool_broker: <changeme>
+  # Replace with valid Red Hat Subscription Management pool ID that contains OpenShift 2.x Node entitlements
+  rh_reg_pool_node: <changeme>
+  rh_reg_act_key_broker: ""
+  rh_reg_act_key_node: ""
+  rhel_repo_base: ""
+  rhel_opt_repo_base: ""
+  rhscl_repo_base: ""
+  openshift_repo_base: ""
+  openshift_extra_repo_base: ""
+  jboss_repo_base: ""
+  named_ip: ""
+  named_hostname: broker1
+  # IP address of the load balancer VIP for brokers (should resolve to 'broker.ose.example.com')
+  lb_vip: <changeme>
+  # IP address of the upstream DNS slave server for 'ose.example.com' zone
+  upstream_dns_ip: <changeme>
+  replicants: broker1.ose.example.com,broker2.ose.example.com,broker3.ose.example.com
+  cartridges: standard
+  # Obtain the network and subnet info from 'neutron net-list'
+  private_net_id: <changeme>
+  private_subnet_id: <changeme>
+  openshift_user1: user1
+  openshift_pass1: password
+  mongo_broker_user: openshift
+  mongo_broker_pass: password
+  mongo_key: password
+  mcollective_user: mcollective
+  mcollective_pass: password
+  activemq_admin_pass: password
+  activemq_user_pass: password
+  no_scramble: false
+  ose_version: 2.2
